@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string input;
+  
+    cin >> input;
+    
+    // Check if the number starts with '0'
+    if (input[0] == '0') {
+        cout << "No" << endl;
+        return 0;
+    }
+    
+    // Check if there is at least one '0' in the number
+    bool hasZero = false;
+    for (char ch : input) {
+        if (ch == '0') {
+            hasZero = true;
+            break;
+        }
+    }
+    
+    if (hasZero) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
+
+    return 0;
+}
